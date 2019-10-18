@@ -22,7 +22,7 @@
 ### Association
 - has_many :groups_users
 - has_many :groups, throuth: :groups_users
-
+- has_many :messages
 
 ## groupsテーブル
 
@@ -35,6 +35,7 @@
 ### Association
 - has_many :groups_users
 - has_many :users, throuth: :groups_users
+- has_many :messages
 
 
 ## Massageテーブル
