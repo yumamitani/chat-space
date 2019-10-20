@@ -16,7 +16,7 @@
     float: left;
 
     .side__header{
-      background-color: #253141;
+      background-color:  #253141;
       height: 100px;
       display: flex;
       align-items: center;
@@ -173,15 +173,28 @@
             color: #434a54;
             border-style: none;
             box-sizing: border-box;
+            
           }
-          .input-box__image{font-size: 1.3rem;
+          .input-box__image {
+            font-size: 1.3rem;
             position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        
-          }
+            right:20px;
+            top:10px;
+
           
+            .icon{
+              display: inline-block;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+            }
+            .hidden {
+              display: none;
+              
+            }
+    
+          }
         }
 
         .submit-btn{
