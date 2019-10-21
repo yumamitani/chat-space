@@ -1,3 +1,5 @@
+@import "config/colors";
+
 .flashbox{
   color: white;
   font-size: 1rem;
@@ -16,7 +18,7 @@
     float: left;
 
     .side__header{
-      background-color:  #253141;
+      background-color: $side_header_black;
       height: 100px;
       display: flex;
       align-items: center;
@@ -106,10 +108,10 @@
         line-height: 40px;
         padding: 0 20px;
         margin-top: 30px;
-        border: solid 1px #38aef0;
+        border: solid 1px $btn_blue;
         position: absolute;
         right: 40px;
-        color:  #38aef0;
+        color:  $btn_blue;
         box-sizing: border-box;
       }
 
@@ -131,7 +133,7 @@
           margin-bottom: 10px;
         
           .massage__top__name{
-            color: #434a54;
+            color: $text_black;
             font-size: 16px;
             font-weight: bold;
           }
@@ -143,7 +145,7 @@
           }
         }
         .massage__text{
-          color: #434a54;
+          color: $text_black;
           font-size: 14px;
           margin-bottom: 10px;
         }
@@ -170,7 +172,7 @@
             height: 50px;
             width: 100%;
             padding: 0 40px 0 10px;
-            color: #434a54;
+            color: $text_black;
             border-style: none;
             box-sizing: border-box;
             
@@ -178,7 +180,7 @@
           .input-box__image {
             font-size: 1.3rem;
             position: absolute;
-            right:20px;
+            right:10px;
             top:10px;
 
           
@@ -188,6 +190,7 @@
               font-size: inherit;
               text-rendering: auto;
               -webkit-font-smoothing: antialiased;
+              
             }
             .hidden {
               display: none;
@@ -202,7 +205,7 @@
           height: 50px;
           padding: 0 30px;
           margin-left: 15px;
-          background-color: #38aef0;
+          background-color:$btn_blue;
           color: white;
           cursor: pointer;
           box-sizing: border-box;
