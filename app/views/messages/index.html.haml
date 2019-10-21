@@ -41,11 +41,11 @@
     .form
       %form.new_message
         .input-box
-          %input.input-box__text{:placeholder => "type a message"}
+          %input.input-box__text{'placeholder': 'type a message'}
           %label.input-box__image
             = fa_icon 'picture-o', class: 'icon'
             %input.hidden{type: 'file'}
-        %input.submit-btn{:type => "submit", :value => "Send" }
+        %input.submit-btn{'type': 'submit', 'value': 'Send' }
           
           
           
