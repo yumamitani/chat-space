@@ -38,13 +38,20 @@
 
         &__menu{
           display: flex;
-
+          
           &__new-group{
             margin-left: 0.3rem;
           }
+            .icon {
+              color: $white;
+            }
           &__edit-user{
             margin-left: 0.3rem;
           }
+            .icon {
+              color: $white;
+              
+            }
         } 
          
       }   
@@ -56,18 +63,21 @@
       padding: 20px 20px 0;
       overflow: scroll;
       box-sizing: border-box;
+      
 
       .group{
         margin-bottom: 40px;
-
+        
         &__name{
           font-size: 15px;
           margin-bottom: 5px;
+          color: white;
         } 
         
           
         &__message{
           font-size: 11px;
+          color: white;
         }
       }
     }          
