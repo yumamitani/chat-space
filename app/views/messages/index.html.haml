@@ -16,34 +16,29 @@
     .groups
       - current_user.groups.each do |group|
         .group
-          -# = link_to group_messages_path(group) do
-          .group__name
-            = group.name
-          .group__message
-            メッセージはまだありません。
+          = link_to group_messages_path(group) do
+            .group__name
+              = group.name
+            .group__message
+              メッセージはまだありません。
   .chat-main
     .main-header
       .main-header__leftbox
         .main-header__leftbox__current-groupname
-          グループ名
+          = @group.name
         %h3.main-header__leftbox__menber
           = current_user.name
-      %a{'href': '/groups/[:group_id]/edit'}
+      = link_to edit_group_path(@group) do
         .main-header__edit-btn Edit
     .massages
-      .massage
-        .massage__top
-          .massage__top__name
-            田中
-          .massage__top__day-time
-            2019/10/20 11:11
-        .massage__text
-          chat-spaceフロントの実装をしています。 
+      = render @messages
+      
+    
     .form
-      %form.new_message
-        .input-box
-          %input.input-box__text{'placeholder': 'type a message'}
-          %label.input-box__image
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
             = fa_icon 'picture-o', class: 'icon'
-            %input.hidden{type: 'file'}
-        %input.submit-btn{'type': 'submit', 'value': 'Send' }
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
