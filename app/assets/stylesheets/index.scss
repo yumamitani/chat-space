@@ -162,69 +162,40 @@
       }
     }
 
-    .form{
-      height: 90px;
-      padding: 20px 40px;
-      background-color: #ddd;
+    .form {
+      background-color: #DDDDDD;
       box-sizing: border-box;
-
-      .new_message{
-        display: flex;
-        box-sizing: border-box;
-
-        .input-box{
-          position: relative;
-          width: 100%;
-          box-sizing: border-box;
-
-          &__text{
-            height: 50px;
-            width: 100%;
-            padding: 0 40px 0 10px;
-            color: $text_black;
-            border-style: none;
-            box-sizing: border-box;
-            
-          }
-          &__image {
-            font-size: 1.3rem;
-            position: absolute;
-            right:10px;
-            top:10px;
-
-          
-            .icon{
-              display: inline-block;
-              font: normal normal normal 14px/1 FontAwesome;
-              font-size: inherit;
-              text-rendering: auto;
-              -webkit-font-smoothing: antialiased;
-              
-            }
-            .hidden {
-              display: none;
-              
-            }
-    
-          }
+      height: 90px;
+      padding: 20px 50px 20px 40px;
+      &__message {
+        border: none;
+        float: left;
+        height: 50px;
+        width: calc(100% - 150px);
+      }
+      &__mask {
+        background-color: $white;
+        float: left;
+        height: 50px;
+        padding-right: 10px;
+        &__image {
+          font-size: 20px;
+          line-height: 50px;
         }
-
-        .submit-btn{
-          width: 100px;
-          height: 50px;
-          padding: 0 30px;
-          margin-left: 15px;
-          background-color:$btn_blue;
-          color: white;
-          cursor: pointer;
-          box-sizing: border-box;
-          font-family: inherit;
-          font-family: inherit;
-          font-size: inherit;
-          font-weight: inherit;
+        .hidden {
+          display: none;
         }
-          
-      }  
+      }
+      &__submit {
+        background-color: $light_blue;
+        border: none;
+        color: $white;
+        float: right;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
     }
   }
 }       
