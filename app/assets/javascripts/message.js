@@ -47,7 +47,7 @@ $(function(){
        $('.massages').animate({scrollTop: $('.massages')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
-
+      alert('メッセージを入力してください。')
     })
     .always(function(data){
       $('.form__submit').prop('disabled', false);
