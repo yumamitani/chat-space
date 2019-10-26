@@ -40,7 +40,6 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      // console.log(message)
        let html = buildMessage(message);
        $('.massages').append(html)
        $('.form__message').val('')
@@ -49,6 +48,9 @@ $(function(){
     })
     .fail(function(){
 
+    })
+    .always(function(data){
+      $('.form__submit').prop('disabled', false);
     })
   })
 });
