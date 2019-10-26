@@ -19,7 +19,9 @@ $(function(){
         <p class="lower-message__content">
           ${message.content}
         </p>
-        ${img}
+        <p class="lower-message__image">
+           ${img}
+           </p>
       </div>
       
     </div>`
@@ -42,7 +44,6 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      console.log(message)
        let html = buildMessage(message);
        $('.massages').append(html)
        $('.form__message').val('')
