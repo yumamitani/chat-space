@@ -46,7 +46,7 @@ $(function(){
     .done(function(message){
        let html = buildMessage(message);
        $('.massages').append(html)
-       $('.form__message')[0].reset()
+       $('.form__message').val('')
        $('.massages').animate({scrollTop: $('.massages')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
