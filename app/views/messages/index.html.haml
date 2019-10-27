@@ -27,7 +27,8 @@
         .main-header__leftbox__current-groupname
           = @group.name
         %h3.main-header__leftbox__menber
-          = current_user.name
+          - @group.users.each do|user| 
+            = user.name
       = link_to edit_group_path(@group) do
         .main-header__edit-btn Edit
     .massages
