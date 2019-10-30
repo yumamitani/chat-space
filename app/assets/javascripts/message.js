@@ -39,7 +39,7 @@ $(function(){
        let html = buildMessageHTML(message);
        $('.massages').append(html)
        $('.form__message').val('')
-       $('.massages').animate({scrollTop: $('.massages')[0].scrollHeight}, 'fast');
+      //  $('.massages').animate({scrollTop: $('.massages')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
       alert('メッセージを入力してください。')
