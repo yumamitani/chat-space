@@ -37,9 +37,9 @@ $(function(){
     })
     .done(function(message){
        let html = buildMessageHTML(message);
-       $('.massages').append(html)
-       $('.form__message').val('')
-      //  $('.massages').animate({scrollTop: $('.massages')[0].scrollHeight}, 'fast');
+       $('.massages').append(html);
+       $('#new_message').get(0).reset();
+       $('.massages').animate({scrollTop: $('.massages')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
       alert('メッセージを入力してください。')
